@@ -1,8 +1,10 @@
-from django.urls import include, path
+
 from nations import views
+from django.urls import re_path as url 
+
 
 
 urlpatterns = [
-    path(r'^api/nations$', views.nations_list),
-    path(r'^api/nations/(P<pk>[0-9]+)$', views.nations_detail)
+    url(r'^api/nations$', views.nations_list),
+    url(r'^api/nations/(P<pk>[0-9]+)$', views.nations_detail)
 ]
